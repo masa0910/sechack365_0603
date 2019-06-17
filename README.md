@@ -11,3 +11,6 @@
 1. `python manage.py runserver`を実行後にURLにアクセス
     - *The install worked successfully! Congratulations!* と出れば成功
     - *ModuleNotFoundError: No module named 'XXXXX'* と出るときは，`conda install XXXXX`
+## 参考文献
+- Djangoドキュメント ( https://docs.djangoproject.com/ja/2.2/ )
+- Python3.7 + DjangoでHello Worldを作ってみた。 ( https://www.indetail.co.jp/blog/190208/ )

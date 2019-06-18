@@ -1,7 +1,9 @@
 # SecHack365_0603
+
 ## 環境
 - python 3.7.3
 - django 2.2.1  
+
 ## 環境構築&実行方法
 以下はあくまで参考程度に．  
 `python manage.py runserver`を実行した後に*The install worked successfully! Congratulations!* と出れば（たぶん）ここは無視してokです．
@@ -11,6 +13,11 @@
 1. `python manage.py runserver`を実行後にURLにアクセス
     - *The install worked successfully! Congratulations!* と出れば成功
     - *ModuleNotFoundError: No module named 'XXXXX'* と出るときは，`conda install XXXXX`
+
+## 参考文献
+- Djangoドキュメント ( https://docs.djangoproject.com/ja/2.2/ )
+- Python3.7 + DjangoでHello Worldを作ってみた。 ( https://www.indetail.co.jp/blog/190208/ )
+
 ## 北海道回までにすること
 終わったものは横線で消します．
 1. ~~Djangoの環境構築（本田）~~

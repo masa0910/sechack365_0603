@@ -7,12 +7,17 @@
 ## 環境構築&実行方法
 以下はあくまで参考程度に．  
 `python manage.py runserver`を実行した後に*The install worked successfully! Congratulations!* と出れば（たぶん）ここは無視してokです．
+#### Pythonのダウンロードからブラウザで確認するまで
 1. https://www.anaconda.com/distribution/ からPython3.7をダウンロード
 1. `python -V`で*Python 3.7.3*と出ればok
 1. `conda install django` でDjangoをインストール
 1. `python manage.py runserver`を実行後にURLにアクセス
     - *The install worked successfully! Congratulations!* と出れば成功
     - *ModuleNotFoundError: No module named 'XXXXX'* と出るときは，`conda install XXXXX`
+
+#### DBまわり
+1. `./SecHack365_0603`に移動
+1. `python manage.py migrate`を実行
 
 ## 参考文献
 - Djangoドキュメント ( https://docs.djangoproject.com/ja/2.2/ )
@@ -25,7 +30,7 @@
     - 登録されてないUSBが接続された時のアラート
     - USB登録画面
 1. USBの検知（房安）
-1. DBまわり（髙石）
+1. DBまわり（髙石，本田）
     - 設定
     - DBに保存
     - DBから取得

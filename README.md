@@ -15,9 +15,13 @@
     - *The install worked successfully! Congratulations!* と出れば成功
     - *ModuleNotFoundError: No module named 'XXXXX'* と出るときは，`conda install XXXXX`
 
-#### DBまわり
+### DBまわり
+#### migrateの実行
 1. `./SecHack365_0603`に移動
 1. `python manage.py migrate`を実行
+#### admin関連
+1. `python manage.py createsuperuser`を実行して管理者情報の登録
+1. `http://localhost:8000/admin/`でログイン
 
 ## 参考文献
 - Djangoドキュメント ( https://docs.djangoproject.com/ja/2.2/ )

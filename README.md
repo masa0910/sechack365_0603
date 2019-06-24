@@ -22,6 +22,24 @@
 #### admin関連
 1. `python manage.py createsuperuser`を実行して管理者情報の登録
 1. `http://localhost:8000/admin/`でログイン
+#### DBについて
+*Usb*というモデルを追加しました．これは*id*と*usb_serial_number*だけを持つようにしているので，必要に応じて適宜変更してください．  
+`python manage.py shell`を実行すれば，Pythonシェルでも確認できます．
+```
+# インポート
+from sample.models import Usb
+# 作成
+usn = Usb(usb_serial_number="sample serial")
+# 保存
+usn.save()
+
+# それぞれの取り出し
+usn.id
+usn.usb_serial_number
+
+# 保存したデータをまとめて取り出し
+Usb.objects.all()
+```
 
 ## 参考文献
 - Djangoドキュメント ( https://docs.djangoproject.com/ja/2.2/ )

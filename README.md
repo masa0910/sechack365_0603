@@ -28,6 +28,7 @@
 ```
 # インポート
 from sample.models import Usb
+
 # 作成
 usn = Usb(usb_serial_number="sample serial")
 # 保存

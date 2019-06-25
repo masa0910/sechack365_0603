@@ -1,0 +1,35 @@
+body {
+    background: #F7F7F7;
+    color: #292929;
+}
+
+.center {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+i {
+    color: #8168A0;
+    margin: 0 5px;
+}
+
+.fa-circle {
+    font-size: 12px;
+
+    position: relative;
+    bottom: 17px;
+}
+
+.fa-usb {
+    font-size: 60px;
+}
+
+div > p:first-of-type {
+    position: relative;
+    left: 6px;
+
+    margin-bottom: 30px;
+}
+

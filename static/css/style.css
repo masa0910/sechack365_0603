@@ -27,9 +27,8 @@ i {
 }
 
 div > p:first-of-type {
+    margin-bottom: 30px;
     position: relative;
     left: 6px;
-
-    margin-bottom: 30px;
 }
 

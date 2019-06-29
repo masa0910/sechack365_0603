@@ -41,7 +41,10 @@ usn.usb_serial_number
 # 保存したデータをまとめて取り出し
 Usb.objects.all()
 ```
-
+#### Pythonスクリプトからchromeを開く
+1. http://chromedriver.chromium.org/downloads から自分の環境に合ったドライバをインストールして，`PythonPageTranslation`下に配置
+2. *selenium*をインストール  
+ex) `conda install selenium`
 ## 参考文献
 - Djangoドキュメント ( https://docs.djangoproject.com/ja/2.2/ )
 - Python3.7 + DjangoでHello Worldを作ってみた。 ( https://www.indetail.co.jp/blog/190208/ )

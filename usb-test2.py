@@ -8,6 +8,7 @@ import time
 import sys
 import db_access
 
+from win10toast import ToastNotifier 
 
 #繋がっているデバイスのリストを更新
 def get_devinfo(dev_list, sta):
@@ -49,7 +50,12 @@ def main():
             if sys.argv[1] == "det":
                 ###何か新しいデバイスあるよ!!!っていうところ
                 ###他と組み合わせてエラー画面とか吐かせたいですね
-                print("not allow ...new divice : "+str(new_dev[2]))
+
+                #print("not allow ...new divice : "+str(new_dev[2]))
+                
+                toaster = ToastNotifier()
+                toaster.show_toast("not registered usd detect!!! ", "未登録のUSBは使用できません", duration=10) 
+                
                 input()
         #次回処理までの待ち時間設定(sec)
         time.sleep(1)

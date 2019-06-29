@@ -3,12 +3,15 @@
 # で実行してください
 # DBとの連携とかは現状触ってないです、どう処理させましょう…?
 
+from selenium import webdriver
 import win32com.client
 import time
 import sys
 import db_access
 
 from win10toast import ToastNotifier 
+
+driver_path = './PythonPageTranslation/chromedriver'
 
 #繋がっているデバイスのリストを更新
 def get_devinfo(dev_list, sta):
@@ -62,7 +65,11 @@ def main():
                 toaster = ToastNotifier()
                 toaster.show_toast("not registered usd detect!!! ", "未登録のUSBは使用できません\n "+str(new_dev), duration=10) 
                 
+                driver = webdriver.Chrome(driver_path)
+                driver.get('http://localhost:8000/')
+
                 input()
+
         #次回処理までの待ち時間設定(sec)
         time.sleep(1)
    

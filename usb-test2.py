@@ -37,7 +37,8 @@ def main():
         new_dev = get_devinfo(dev_list, 1)
         #Noneが帰ってくる = 新規デバイスなし/None以外が帰ってくる = 新規デバイスがnew_devに格納されている
         if new_dev != None:
-            print("new device : "+str(new_dev[2]))
+            #print("new device : "+str(new_dev[2]))
+            print("new device : "+str(new_dev))
             #regモード(新規デバイス登録モード)起動時
             if sys.argv[1] == "reg":
                 permit_reg = input("allow ...add new device? (y or n) :" )
@@ -46,6 +47,11 @@ def main():
                     print("add : new divice"+str(new_dev[2]))
                     sys.argv[1] = "det"
                     continue
+            #pidとvidが欲しい貴方に
+            if sys.argv[1] == "reg_django":
+                print("pid : "+str(new_dev[1][4:8])+" vid : "+str(new_dev[1][13:17]))
+                input()
+            
             #detモード(新規デバイス検出)起動時
             if sys.argv[1] == "det":
                 ###何か新しいデバイスあるよ!!!っていうところ
@@ -54,7 +60,7 @@ def main():
                 #print("not allow ...new divice : "+str(new_dev[2]))
                 
                 toaster = ToastNotifier()
-                toaster.show_toast("not registered usd detect!!! ", "未登録のUSBは使用できません", duration=10) 
+                toaster.show_toast("not registered usd detect!!! ", "未登録のUSBは使用できません\n "+str(new_dev), duration=10) 
                 
                 input()
         #次回処理までの待ち時間設定(sec)

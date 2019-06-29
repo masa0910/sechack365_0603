@@ -65,10 +65,11 @@ def main():
                 toaster = ToastNotifier()
                 toaster.show_toast("not registered usd detect!!! ", "未登録のUSBは使用できません\n "+str(new_dev), duration=10) 
                 
-                input()
-
                 driver = webdriver.Chrome(driver_path)
                 driver.get('http://localhost:8000/')
+
+                input()
+
         #次回処理までの待ち時間設定(sec)
         time.sleep(1)
    
